@@ -8,6 +8,11 @@
 	<bean id="queryAction" class="com.king.action.queryAction" scope="prototype">
 		<property name="servicepm" ref="servicepm"></property>
 	</bean>
+	
+	<bean id="queryProertyAction" class="com.property.action.queryProertyAction" scope="prototype">
+		<property name="proService" ref="proService"></property>
+	</bean>
+	
 	<bean id="uploadAction" class="com.king.action.UploadAction" scope="prototype">
 	</bean>
 </beans>

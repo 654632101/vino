@@ -3,6 +3,7 @@ package com.filter;
 import java.util.Map;
 
 import com.joyque.action.LoginAction;
+import com.joyque.pojo.Account;
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionInvocation;
@@ -28,7 +29,7 @@ public class AuthInterceptor extends AbstractInterceptor {
 			excluded = parm.toUpperCase().equals("TRUE");
 		}
 
-		String user = (String) session.get(sessionKey);
+		Account user = (Account) session.get(sessionKey);
 		if (excluded || user != null) {
 			return invocation.invoke();
 		}

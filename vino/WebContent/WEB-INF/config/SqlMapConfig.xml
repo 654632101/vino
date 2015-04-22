@@ -27,7 +27,8 @@
        classpath, as they are here (com.domain.data...) -->
   <sqlMap resource="com/joyque/pojo/Account.xml"/>
   <sqlMap resource="com/king/pojo/pm.xml"/>
-  
+  <sqlMap resource="com/property/vo/proertyVo.xml"/>
+    
   <!-- List more here...
   <sqlMap resource="com/mydomain/data/Order.xml"/>
   <sqlMap resource="com/mydomain/data/Documents.xml"/>

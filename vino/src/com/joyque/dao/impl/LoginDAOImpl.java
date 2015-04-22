@@ -13,17 +13,14 @@ public class LoginDAOImpl extends SqlMapClientDaoSupport implements ILoginDAO {
 	private static Logger logger = Logger.getLogger(LoginDAOImpl.class
 			.getName());
 
-	public String login() {
+	public Account login(String userName,String passWord) {
 		System.out.println("LoginDAOImpl.login()");
 		logger.info("LoginDAOImpl.login()");
-
-		// logger.addAppender(newAppender);
-		List<Account> accountList = getSqlMapClientTemplate().queryForList(
-				"selectAllAccounts");
-		for (Account a : accountList) {
-			System.out.println(a.getId() + ") " + a.getUserName()
-					+ " 's email is " + a.geteMail());
-		}
-		return null;
+		Account acc = new Account();
+		acc.setUserAccount(userName);
+		acc.setPassWord(passWord);
+		Account account_info = (Account) getSqlMapClientTemplate().queryForObject("queryUser", acc);
+		System.out.println("返回结果集:" + account_info);
+		return account_info;
 	}
 }

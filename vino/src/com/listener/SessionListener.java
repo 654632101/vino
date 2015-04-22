@@ -33,21 +33,21 @@ public class SessionListener implements HttpSessionListener,
 	@Override
 	public void sessionDestroyed(HttpSessionEvent event) {
 		HttpSession ses = event.getSession();
-//		String  loginToken = (String) ses.getAttribute("loginToken");
-//		System.out.println("自动销毁session的id ： " + loginToken);
-//		String id = ses.getId() + ses.getCreationTime();
-//		System.out.println("销毁了一个session用户！");
-//		if (ses.getAttribute("user") != null) {
-//			String user_name = (String) ses.getAttribute("user");
-//			System.out.println("销毁登录用户 " + user_name);
-//		} else {
-//			System.out.println("销毁匿名登录用户。");
-//		}
-//		synchronized (this) {
-//			// SummerConstant.USERNUM--; // 用户数减一
-//			// SummerConstant.UserMap.remove(id); // 从用户组中移除掉，用户组为一个map
-//			System.out.println("synchronized  销毁了一个session用户！");
-//		}
+		// String loginToken = (String) ses.getAttribute("loginToken");
+		// System.out.println("自动销毁session的id ： " + loginToken);
+		// String id = ses.getId() + ses.getCreationTime();
+		// System.out.println("销毁了一个session用户！");
+		// if (ses.getAttribute("user") != null) {
+		// String user_name = (String) ses.getAttribute("user");
+		// System.out.println("销毁登录用户 " + user_name);
+		// } else {
+		// System.out.println("销毁匿名登录用户。");
+		// }
+		// synchronized (this) {
+		// // SummerConstant.USERNUM--; // 用户数减一
+		// // SummerConstant.UserMap.remove(id); // 从用户组中移除掉，用户组为一个map
+		// System.out.println("synchronized  销毁了一个session用户！");
+		// }
 	}
 
 	/**

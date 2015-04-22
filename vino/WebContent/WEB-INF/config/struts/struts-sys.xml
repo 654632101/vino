@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 	<include file="struts-default.xml" />
-	<package name="" namespace="/" extends="struts-default">
+	<package name="elsp-default" namespace="/" extends="struts-default">
 
 		<interceptors>
 			<!-- 定义了一个名为authority的拦截器 -->
@@ -17,12 +19,34 @@
 		<global-results>
 			<!-- <result name="error">/WEB-INF/jsp/Welcome.jsp</result> -->
 			<result name="login">Login.jsp</result>
+			<result name="error">Login.jsp</result>
 		</global-results>
 
 		<action name="login" class="loginAction" method="login">
-			<result name="login">/WEB-INF/pages/vinodata.jsp</result>
+			<result name="OK" type="redirectAction">
+					<param name="actionName">queryProerty</param>
+					<param name="namespace">/</param>
+			</result>
 		</action>
-
+		<action name="autoImage" class="loginAction" method="autoImage">
+		</action>
+			<!--  	
+			
+			<result name="login">/WEB-INF/pages/vinodata.jsp</result>
+			
+			<result name="login" type="">queryProerty.action</result>
+			<result name="login">/WEB-INF/pages/vinodata.jsp</result>
+				<result name="login" type="redirect-action">
+					<param name="actionName">queryProerty.action</param>
+					<param name="namespace">/</param>
+			</result>
+			-->
+		
+		
+		<action name ="queryProerty" class="queryProertyAction" method="queryProerty">
+			<result name="success">/WEB-INF/pages/vinodata.jsp</result>
+		</action>
+		
 		<action name="top1">
 			<result>/WEB-INF/jsp/seccon.jsp</result>
 		</action>

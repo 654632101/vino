@@ -8,4 +8,8 @@
 	<bean id="servicepm" class="com.king.service.impl.pmServiceImpl" scope="prototype">
 		<property name="daoPm" ref="daoPm"></property>
 	</bean>
+	
+	<bean id="proService" class="com.property.service.impl.propertyServiceImpl" scope="prototype">
+		<property name="propertyDao" ref="propertyDao"></property>
+	</bean>
 </beans>

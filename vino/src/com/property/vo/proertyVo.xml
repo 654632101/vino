@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="proertyVo">
+
+	<typeAlias alias="proertyVo" type="com.property.vo.proertyVo" />
+
+	<resultMap id="proertyVoResult" class="proertyVo">
+		<result property="Id" column="ID" />
+		<result property="proName" column="NAME" />
+		<result property="section" column="SECTION" />
+		<result property="regional" column="REGIONAL" />
+		<result property="measureArea" column="MEASURE_AREA" />
+		<result property="rent" column="RENT" />
+		<result property="eentType" column="EENT_TYPE" />
+	</resultMap>
+
+	<select id="queryPro" resultMap="proertyVoResult">
+		select * from TB_PROPERTY_INFO
+	</select>
+</sqlMap>

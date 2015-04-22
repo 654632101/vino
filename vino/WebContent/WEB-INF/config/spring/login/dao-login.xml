@@ -18,4 +18,13 @@
 		   <ref bean="sqlMapClient"/>
 		</property>
 	</bean>
+	
+	<bean id="propertyDao" class="com.property.dao.impl.propertyDaoImpl" scope="prototype">
+		<property name="dataSource">
+		   <ref bean="dataSource"/>
+		</property>
+		<property name="sqlMapClient">
+		   <ref bean="sqlMapClient"/>
+		</property>
+	</bean>
 </beans>

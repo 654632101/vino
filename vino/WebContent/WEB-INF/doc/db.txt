@@ -1,0 +1,29 @@
+-- Create the user 
+create user KING_TABLE
+  default tablespace USERS
+  temporary tablespace TEMP
+  profile DEFAULT;
+-- Grant/Revoke role privileges 
+grant connect to KING_TABLE;
+grant dba to KING_TABLE;
+grant resource to KING_TABLE;
+-- Grant/Revoke system privileges 
+grant alter any procedure to KING_TABLE;
+grant alter any table to KING_TABLE;
+grant create any index to KING_TABLE;
+grant create any procedure to KING_TABLE;
+grant create any table to KING_TABLE;
+grant create any view to KING_TABLE;
+grant create session to KING_TABLE;
+grant delete any table to KING_TABLE;
+grant drop any index to KING_TABLE;
+grant drop any procedure to KING_TABLE;
+grant drop any table to KING_TABLE;
+grant drop any view to KING_TABLE;
+grant insert any table to KING_TABLE;
+grant select any dictionary to KING_TABLE;
+grant select any table to KING_TABLE;
+grant unlimited tablespace to KING_TABLE;
+grant update any table to KING_TABLE;
+
+alter user king_table identified by king;
